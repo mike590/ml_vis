@@ -1,0 +1,35 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+  <div class="equation">
+    y =
+    <input type="number" name="feature1" class="weight" value="1" max="100" min="-99">x *
+    <input type="number" name="feature2" class="weight" value="1" max="100" min="-99">x<sup>2</sup> *
+    <input type="number" name="feature3" class="weight" value="1" max="100" min="-99">x<sup>3</sup> *
+    <input type="number" name="feature4" class="weight" value="1" max="100" min="-99">x<sup>4</sup>
+  </div>
+  <br>
+  <div class="">
+    Amount of Points to Generate
+    <div class="">
+      <label for="amount-of-points">100</label>
+      <input class="amount-of-points" type="radio" name="amout-of-points" value="100">
+    </div>
+    <div class="">
+      <label for="amount-of-points">1000</label>
+      <input class="amount-of-points" type="radio" name="amout-of-points" value="1000" checked="checked">
+    </div>
+    <div class="">
+      <label for="amount-of-points">10000</label>
+      <input class="amount-of-points" type="radio" name="amout-of-points" value="10000">
+    </div>
+  </div>
+  <label for="error">Error - <span id="error-span">0</span>%</label>
+  <br>
+  <input onchange="changeError(this)" type="range" id="error" min="0" value="0" max="10" step="0.5" >
+  <br>
+  <button onclick="generatePoints()" type="button" name="button" id="generatePoints">Generate Points</button>
+
+</body>
